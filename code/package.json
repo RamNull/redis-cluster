@@ -1,0 +1,29 @@
+{
+  "name": "redis-cluster-test",
+  "version": "1.0.0",
+  "description": "TypeScript Node.js application to test Redis cluster",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/redis-test.js",
+    "dev": "ts-node src/redis-test.ts",
+    "example": "ts-node src/example.ts",
+    "test": "npm run build && npm start"
+  },
+  "keywords": [
+    "redis",
+    "cluster",
+    "typescript",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "redis": "^5.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

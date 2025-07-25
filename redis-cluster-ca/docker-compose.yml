@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: redis-single-cluster
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./certs:/certs
+      - ./data/node1:/data
+      - ./redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
