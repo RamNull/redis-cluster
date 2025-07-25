@@ -162,7 +162,7 @@ try {
 
 # 🔍 Verify cluster state
 Write-Host "`n🔍 Verifying cluster state..." -ForegroundColor Cyan
-Start-Sleep -Seconds 2
+Start-Sleep -Seconds 10
 
 $clusterInfo = docker exec redis-single-cluster redis-cli --tls --cert /certs/redis.crt --key /certs/redis.key --cacert /certs/ca.crt -p 6379 cluster info
 Write-Host "📊 Cluster Status:" -ForegroundColor Cyan
